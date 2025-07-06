@@ -3,6 +3,10 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { TypingAnimation } from "@/components/magicui/typing-animation";
+import { Lobster } from "next/font/google";
+
+const lobster = Lobster({ weight: "400", subsets: ["latin"] });
 
 export default function LoginPage() {
   const router = useRouter();
@@ -31,7 +35,20 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-black text-white px-4">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-4">
+      <h1
+              className={`${lobster.className} text-2xl font-bold text-[#00ffd5] h-20`}
+            >
+              <TypingAnimation
+                className={cn(
+                  "text-4xl font-bold leading-[5rem] tracking-[-0.02em]",
+                  "bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888]",
+                  "bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient"
+                )}
+              >
+                InstaPocket
+              </TypingAnimation>
+            </h1>
       <form
         onSubmit={handleLogin}
         className="bg-gray-900 p-8 rounded shadow-md w-full max-w-md"

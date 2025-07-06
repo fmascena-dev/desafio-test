@@ -38,7 +38,9 @@ export default function Feed() {
       <Header />
       <SearchBar onSearch={handleSearch} />
       {loading ? (
-        <p className="text-center mt-10">Carregando imagens...</p>
+        <p className="text-gray-200 font-bold text-2xl flex justify-center items-center mt-6">
+          Carregando imagens...
+        </p>
       ) : (
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-6">
           {photos.map((photo) => (

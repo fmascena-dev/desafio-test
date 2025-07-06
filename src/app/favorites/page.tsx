@@ -16,7 +16,7 @@ export default function FavoritesPage() {
                   "bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient"
                 )}>Fotos Favoritas ❤️</h2>
       {favorites.length === 0 ? (
-        <p className="text-gray-600">Nenhuma imagem favoritada.</p>
+        <p className="text-gray-200 font-bold text-2xl flex justify-center items-center mt-6">Nenhuma imagem favoritada.</p>
       ) : (
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-6">
           {favorites.map((photo) => (

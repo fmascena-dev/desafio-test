@@ -41,7 +41,7 @@ export default function Header() {
       <nav className="flex items-center gap-4 text-sm font-medium px-2 space-x-8">
         <Link
           href="/feed"
-          className={`relative group transition-colors duration-300 ${
+          className={`relative group transition-colors duration-300 font-bold ${
             pathname === "/feed"
               ? "text-[#f09433]"
               : "text-gray-200 hover:text-[#dc2743]"
@@ -57,7 +57,7 @@ export default function Header() {
 
         <Link
           href="/favorites"
-          className={`relative group transition-colors duration-300 ${
+          className={`relative group transition-colors duration-300 font-bold ${
             pathname === "/favorites"
               ? "text-[#f09433]"
               : "text-gray-200 hover:text-[#dc2743]"
@@ -74,7 +74,7 @@ export default function Header() {
         {isLoggedIn && (
           <button
             onClick={handleLogout}
-            className="relative group text-gray-200 hover:text-[#dc2743] transition-colors duration-300 cursor-pointer"
+            className="relative group text-gray-200 hover:text-[#dc2743] transition-colors duration-300 cursor-pointer font-bold"
           >
             SAIR
             <span

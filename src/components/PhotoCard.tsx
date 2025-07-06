@@ -13,7 +13,7 @@ export default function PhotoCard({ photo }: { photo: Photo }) {
   return (
     <>
       <div className="relative group cursor-pointer w-full max-w-sm mx-auto ">
-        <div className="relative aspect-[3/4] w-full overflow-hidden rounded shadow-sm border transition duration-300 md:hover:border-[#f09433]">
+        <div className="relative aspect-[3/4] w-full overflow-hidden rounded shadow-sm border transition duration-300 md:hover:border-[#dc2743]">
           <Image
             src={photo.urls.regular}
             alt={photo.alt_description || "Foto"}
